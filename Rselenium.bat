@@ -1,0 +1,1 @@
+java -Dwebdriver.chrome.driver=C:\Users\Naldrek\Documents\chromedriver.exe -jar C:\Users\Naldrek\Documents\selenium-server-standalone-3.0.1.jar -port 4444
