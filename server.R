@@ -1,5 +1,8 @@
 #SERVER
 server = function(input, output, session) {
+  observe({
+    if (input$close > 0) {stopApp();remDr$close()} # stop shiny
+  })
   
   output$foo = renderText({
     #Begin

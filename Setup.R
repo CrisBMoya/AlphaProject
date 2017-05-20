@@ -31,13 +31,12 @@ script.dir <- dirname(sys.frame(1)$ofile)
 setwd(paste(getwd()))
 
 #Running Java through bat
-print("Openning Selenium driver")
-shell.exec("Rselenium.bat")
+#print("Openning Selenium driver")
+#shell.exec("Rselenium.bat")
 
 #Openning browser controlled by Selenium
 remDr <- remoteDriver(browserName = "chrome")
 remDr$open(silent=TRUE)
-remDr$open
 
 #Setting up Text2Voice webpage
 print("Setting up Text2Voice webpage. Wait until done")
@@ -48,4 +47,5 @@ for(i in 1:107){
 
 #Runapp
 print("Running Alpha Project App")
+setwd("..")
 runApp("Alpha", launch.browser = TRUE)
